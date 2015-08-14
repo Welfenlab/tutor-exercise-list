@@ -1,0 +1,30 @@
+{
+  "name": "@tutor/exercise-list",
+  "version": "0.1.0",
+  "description": "Displays a list of exercises in Tutor.",
+  "main": "lib/exercise_list.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublish" : "node node_modules/gulp/bin/gulp.js"
+  },
+  "keywords": [
+    "Tutor",
+    "Exercises"
+  ],
+  "repository" : "git@github.com:Welfenlab/tutor-exercise-list.git",
+  "contributors" : [
+    "Maximilian Klein <dasmaxl@gmail.com> (https://github.com/LittleHelicase)",
+    "Maik Marschner (https://github.com/leMaik)",
+    "Tim Ebbeke (https://github.com/5cript)"
+  ],
+  "devDependencies": {
+    "browserify": "^11.0.0",
+    "coffeeify": "^1.1.0",
+    "gulp": "^3.9.0",
+    "gulp-coffee": "^2.3.1",
+    "gulp-util": "^3.0.6",
+    "markdown-it-math": "^2.0.1",
+    "vinyl-source-stream": "^1.1.0"
+  },
+  "license": "MIT"
+}
