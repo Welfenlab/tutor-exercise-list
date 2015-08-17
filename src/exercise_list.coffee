@@ -1,4 +1,4 @@
-module.exports = (ko, config) ->
+module.exports = (ko) ->
   class ExerciseViewModel
     constructor: (data) ->
       @id = data.id
@@ -12,18 +12,21 @@ module.exports = (ko, config) ->
       @formattedDueDate = ko.computed => @dueDate().toLocaleDateString()
       @isOld = ko.computed => @dueDate().getTime() < Date.now()
 
-    show: => config.show @id
+    show: => @show @id
 
   class OverviewPageViewModel
     constructor: ->
       @exercises = ko.observableArray()
 
-      config.getExercises (exercises) =>
-        @exercises exercises.map( (e) -> new ExerciseViewModel(e)).sort (a, b) ->
+      @getExercises (exercises) =>
+        @exercises exercises.map((e) => @createExerciseViewModel(e)).sort (a, b) ->
           if a.isOld()
             return if b.isOld() then 0 else 1
           else
             return if b.isOld() then 1 else 0
 
-  viewModel: OverviewPageViewModel
-  template: config.html
+    createExerciseViewModel: (e) -> new ExerciseViewModel(e)
+
+
+  ExerciseViewModel: ExerciseViewModel
+  OverviewPageViewModel: OverviewPageViewModel
