@@ -12,8 +12,6 @@ module.exports = (ko) ->
       @formattedDueDate = ko.computed => @dueDate().toLocaleDateString()
       @isOld = ko.computed => @dueDate().getTime() < Date.now()
 
-    show: => @show @id
-
   class OverviewPageViewModel
     constructor: ->
       @exercises = ko.observableArray()
