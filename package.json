@@ -1,6 +1,6 @@
 {
   "name": "@tutor/exercise-list",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Displays a list of exercises in Tutor.",
   "main": "lib/exercise_list.js",
   "scripts": {
