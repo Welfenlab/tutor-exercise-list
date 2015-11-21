@@ -4,7 +4,7 @@
   "description": "Displays a list of exercises in Tutor.",
   "main": "lib/exercise_list.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "echo \"No test specified\" && exit 0",
     "prepublish" : "node node_modules/gulp/bin/gulp.js"
   },
   "keywords": [
